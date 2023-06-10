@@ -13,6 +13,6 @@ How to use the application (`Daftar Kata.exe`):
 
 ## Notes
 - This project will not be improved as a noteworthy project
-- Coded in Python 2, specific version not documented. This does not affect the executable application
+- Coded in Python 2.7, this does not affect the executable application
 - Provided in Indonesian language
 - Last updated at 8 May 2017
