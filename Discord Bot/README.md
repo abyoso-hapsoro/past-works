@@ -1,0 +1,2 @@
+# Discord Bot
+This section is dedicated to Discord Bot. I have created a few personal Discord bots for practice. For this directory, XyPy is the only bot code I am putting in this repo for now. I may plan to create a finalized Discord bot in the future with many more functionalities
