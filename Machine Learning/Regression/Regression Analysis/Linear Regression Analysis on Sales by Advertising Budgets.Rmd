@@ -1,0 +1,291 @@
+---
+title: "Tugas Akhir Praktikum Analisis Regresi 1"
+author: "Abyoso Hapsoro Nurhadi"
+date: "Jumat, 14 Juni 2019"
+mainfont: Cambria
+header-includes:
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+output:
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: yes
+---
+
+# Pra-Pengolahan {.tabset}
+
+## Pengantar
+Notebook ini dibuat oleh Abyoso Hapsoro Nurhadi dengan NPM 1606884136 untuk memenuhi Tugas Akhir Praktikum Analisis Regresi 1. R yang digunakan adalah versi 3.5.3 dan RStudio yang digunakan adalah versi 1.1.463.
+
+## Library dan Setup
+Pertama, setup beberapa hal untuk markdown.
+```{r}
+# menangkap notebook
+knitr::opts_chunk$set(cache=TRUE) 
+
+# set notasi non-saintifik untuk sesi R
+options(scipen = 999)
+
+# membersihkan environment
+rm(list = ls())
+```
+
+Lalu load library yang diperlukan.
+```{r, message = FALSE, warning = FALSE}
+# jika package pacman tidak ada, install terlebih dahulu
+if (!require("pacman")) install.packages("pacman")
+
+# load library pacman
+library(pacman)
+
+# gunakan fungsi pacman untuk load library
+# jika library tersebut tidak ada, install terlebih dahulu
+p_load(mice, tidyverse, gridExtra, olsrr, gvlma)
+```
+
+Bersihkan console sebelum lanjut.
+```{r, results = 'hide'}
+# membersihkan console
+cat('\014')
+```
+
+\newpage
+# Nomor 1
+Diberikan kode sebagai berikut.
+```{r, eval = FALSE}
+#loading data
+data<-iris[,c(1,3)]
+install.packages(mice)
+#make missing data
+library(mice)
+alpha<-ampute(data, prop = 0.2, mech = "MAR",cont = TRUE,
+bycases = TRUE, run = TRUE)
+data1<-alpha$amp
+names(data1)<-c("x","y")
+#pada kasus ini, data1 memiliki 30 buah observasi yang mana
+#salah satu dari x atau y missing.
+#Salah satu teknik imputasi (mengisi missing data) adalah dengan menggunakan model regresi yang dibentuk dari data yang tidak missing.
+#menghilangkan data missing
+data2<-na.omit(data1)
+#model y terhadap x
+model1<-lm(data2$y~data2$x)
+model1$coefficients
+#y = -7.538727 + 1.931484*x yang ekuivalen dengan
+#Model x terhadap y
+model2<-lm(data2$x~data2$y)
+model2$coefficients
+#x = 4.3798285 + 0.3803727*y yang ekuivalen dengan
+#y = 2.629*x - 11.51457
+#dalam kasus ini, persamaan y terhadap x yang diberikan oleh kedua model berbeda
+```
+
+Apabila kode tersebut dijalankan, diperoleh hasil berikut.
+```{r, echo = FALSE}
+#loading data
+data<-iris[,c(1,3)]
+#make missing data
+library(mice)
+alpha<-ampute(data, prop = 0.2, mech = "MAR",cont = TRUE,
+bycases = TRUE, run = TRUE)
+data1<-alpha$amp
+names(data1)<-c("x","y")
+#pada kasus ini, data1 memiliki 30 buah observasi yang mana
+#salah satu dari x atau y missing.
+#Salah satu teknik imputasi (mengisi missing data) adalah dengan menggunakan model regresi yang dibentuk dari data yang tidak missing.
+#menghilangkan data missing
+data2<-na.omit(data1)
+#model y terhadap x
+model1<-lm(data2$y~data2$x)
+model1$coefficients
+#y = -7.538727 + 1.931484*x yang ekuivalen dengan
+#Model x terhadap y
+model2<-lm(data2$x~data2$y)
+model2$coefficients
+#x = 4.3798285 + 0.3803727*y yang ekuivalen dengan
+#y = 2.629*x - 11.51457
+#dalam kasus ini, persamaan y terhadap x yang diberikan oleh kedua model berbeda
+```
+
+## Jawaban Pertanyaan
+1. Akan dijelaskan mengapa hal ini terjadi.
+
+Asumsikan bahwa yang dimaksud dengan hal ini adalah kejadian berbedanya kedua model yang dihasilkan oleh model y terhadap x dan model x terhadap y. Misal model y terhadap x adalah model 1 dan model x terhadap y adalah model 2.
+
+Dalam sebuah model regresi, variabel target diprediksi dengan variabel-variabel prediktornya. Artinya, model 1 memprediksi y dengan nilai x dan model 2 memprediksi x dengan nilai y. Hal inilah yang menyebabkan kedua model tidak sama, yakni variabel yang ingin diprediksi tidak sama. Walaupun persamaan model 2 diatur sedemikian sehingga menjadi persamaan untuk memprediksi y, secara konsep ini tidaklah benar karena persamaan ini seharusnya digunakan untuk memprediksi x bukan untuk memprediksi y. Sehingga persamaan model 1 dan model 2 berbeda.
+
+\newpage
+2. Akan dijelaskan dan dilakukan model yang digunakan untuk mengimputasi data.
+
+Perhatikan bahwa pada kode yang diberikan metode untuk membuat sebagian data missing adalah MAR yaitu Missing at Random. Data yang memiliki sifat missing value ini memiliki kecenderungan bahwa data yang hilang tidak berhubungan dengan data yang hilang, namun dengan beberapa data yang terobservasi. Dalam kasus ini, cukup aman untuk menghilangkan data dengan missing values karena tidak menciptakan bias yang signifikan. Namun kita tetap dapat mengimputasi data, dengan catatan melakukan imputasi belum tentu memberikan model yang lebih baik.
+
+Dalam kasus soal ini, kode telah mengambil sebagian dari data iris, yaitu Sepal Length dan Petal Length yang dua-duanya bernilai real. Maka metode-metode imputasi yang biasa dilakukan adalah mean, median, dan modus. Namun kita juga dapat melakukan imputasi dengan metode Regresi Linier dan metode Multiple Imputation. Metode mean, median, dan modus akan menciptakan terlalu banyak data yang serupa dalam kasus regresi linier sederhana yang ada pada soal ini (karena hanya terdapat 1 fitur dan 1 target), sehingga ketiganya bukan merupakan pilihan yang baik. Secara teoritis, metode Regresi Linier memiliki hasil imputasi yang baik, namun cenderung untuk melakukan imputasi ini terlalu baik sehingga error standar deflasi serta diperlukan asumsi bahwa terdapat hubungan linier antara variabel fitur dengan target walaupun belum tentu ada. Artinya, bias yang diciptakan dalam mengimputasi dapat signifikan. Sehingga tersisa metode Multiple Imputation. Metode ini adalah metode yang paling baik untuk mengimputasi data kontinu karena bias yang diciptakan tidak signifikan.
+
+Akan digunakan metode Multiple Imputation dengan model Markov Chain Monte Carlo. Metode ini sudah tersedia dalam package mice (Multivariate Imputation via Chained Equations) untuk digunakan. Metode MICE ini mengasumsikan bahwa missing data adalah MAR, yang sesuai dengan permasalahan ini.
+
+```{r, fig.show = "hide"}
+# lihat pola missing value
+md.pattern(data1)
+```
+
+Dari output tersebut, kita temukan bahwa sebanyak 121 observasi tidak memiliki missing value, 18 observasi memiliki missing value pada y, dan 11 observasi memiliki missing value pada x.
+```{r, results = "hide"}
+# imputasi regresi deterministik
+imp <- mice(data1, method = "norm.predict", m = 5, seed = 123)
+
+# bangun model prediktif dari kelima model
+fit <- lm.mids(y ~ x, data = imp)
+```
+
+Bandingkan hasil model pada data tanpa imputasi (data2) dengan model pada data dengan imputasi missing values (data1_imp).
+```{r}
+nonimp_model <- lm(y ~ x, data = data2)
+summary(nonimp_model)
+```
+
+```{r}
+summary(pool(fit))
+pool.r.squared(fit)
+pool.r.squared(fit, adjusted = TRUE)
+```
+
+Terlihat bahwa model dengan data yang diimputasi lebih baik dibandingkan dengan data yang tidak diimputasi pada kasus ini.
+
+\newpage
+# Nomor 2
+Akan diaplikasikan analisis regresi linier dan diinterpretasikan setiap parameter pada model tersebut. Karena dibebaskan untuk mencari atau membuat dataset, penulis memutuskan untuk mencari dan menggunakan data eksternal. Data diambil dari https://github.com/kassambara/datarium/blob/master/data/marketing.rda yang dapat dipanggil melalui package datarium di dalam R.
+
+## Import Data
+Baca data dan cek strukturnya.
+```{r}
+# baca data
+data("marketing", package = "datarium")
+
+# cek 6 data pertama
+head(marketing)
+
+# cek eksistensi missing values
+sapply(marketing, function(x) sum(is.na(x)))
+```
+
+## Keterangan Data
+Data marketing ini berisi 3 media periklanan (youtube, facebook, dan koran) dan sales yang dihasilkan. Entri sampel adalah budget periklanan dalam ribuan dollar bersama dengan sales. Terdapat 200 sampel dalam data.
+
+## Plot Persebaran Data
+```{r}
+p1 <- ggplot(data = marketing, mapping = aes(x = youtube, y = sales)) + geom_point()
+p2 <- ggplot(data = marketing, mapping = aes(x = facebook, y = sales)) + geom_point()
+p3 <- ggplot(data = marketing, mapping = aes(x = newspaper, y = sales)) + geom_point()
+grid.arrange(p1, p2, p3, nrow = 1, ncol = 3, top = "Distribusi Data")
+```
+
+Perhatikan bahwa ada pola kecenderungan naiknya sales bersama dengan naiknya budget periklanan youtube dan facebook. Tampak bahwa tidak ada pola kecenderungan dari newspaper terhadap sales. Hal ini dapat dianalisis lebih lanjut dengan melakukan pemilihan subset model terbaik.
+
+## Pemilihan Subset Model Terbaik
+Misal:
+
+* x1 adalah budget periklanan youtube
+* x2 adalah budget periklanan facebook
+* x3 adalah budget periklanan newspaper
+* y adalah sales yang dihasilkan
+
+```{r}
+names(marketing) <- c("x1", "x2", "x3", "y")
+```
+
+Akan ditentukan subset model terbaik untuk memprediksi sales.
+
+\newpage
+\blandscape
+```{r}
+model <- lm(y ~ ., data = marketing)
+ols_step_best_subset(model)
+```
+
+Perhatikan bahwa performa model 3 menurun dari model 2 dilihat dari berbagai kriteria, seperti R-squared, adj R-squared, C(p), dan MSEP. Sehingga diperoleh cukup justifikasi untuk men-drop variabel newspaper.
+
+```{r}
+# drop kolom newspaper
+marketing[, "x3"] <- list(NULL)
+
+# cek ulang 6 data pertama
+head(marketing)
+```
+
+## Regresi Linier Tingkat Tinggi
+Selanjutnya, akan dicoba beberapa subset-subset model order tinggi yang melibatkan faktor interaksi.
+
+```{r}
+model <- lm(y ~ x1 + x2 + x1*x2 + I(x1^2) + I(x2^2), data = marketing)
+ols_step_best_subset(model)
+```
+
+Terlihat bahwa x2 tidak perlu dibawa ke tingkat tinggi karena menurunkan performa model. Sehingga untuk percobaan-percobaan selanjutnya akan difokuskan membawa x1 ke tingkat tinggi.
+
+```{r}
+model <- lm(y ~ x1 + x2 + x1*x2 + I(x1^2) + I(x1^3) + I(x1^4) + I(x1^5) + I(x1^6), data = marketing)
+ols_step_best_subset(model)
+```
+
+```{r}
+model <- lm(y ~ x1 + x2 + x1*x2 + I(x1^2) + I(x1^2)*x2 + I(x1^3)*x2 + I(x1^4)*x2, data = marketing)
+ols_step_best_subset(model)
+```
+
+Terlihat dari kedua pemilihan subset di atas, x1 tingkat tinggi tanpa berinteraksi dengan x2 merupakan pilihan lebih baik karena C(p) lebih konsisten serta R-squared, adj R-squared, dan MSEP yang lebih bagus. Agar tidak terlalu membuat kompleks model dan tidak overfitting, akan digunakan model subset terbaik yaitu:
+$$\hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1 x_2 + \beta_4 x_1^2 + \beta_5 x_1^3 + \beta_6 x_1^4 + \beta_7 x_1^5 + \beta_8 x_1^6$$
+
+```{r}
+model <- lm(y ~ x1 + x2 + x1*x2 + I(x1^2) + I(x1^3) + I(x1^4) + I(x1^5) + I(x1^6), data = marketing)
+summary(model)
+```
+
+Dari hasil fitting tersebut, diperoleh model regresinya (setelah dibulatkan 4 angka di belakang desimal) sebagai berikut:
+$$\hat{y} = 2.4374 + 0.2889 x_1 + 0.0426 x_2 + 0.0009 x_1 x_2 - 0.0046 x_1^2$$
+Ternyata walaupun terlihat pada step pemilihan subset model terbaik ada kenaikan R-squared serta penurunan MSEP, pengaruh koefisien regresi tingkat tinggi dari x1 (youtube) tidak lebih signifikan dari 0.0001.
+
+Karena ini dan untuk menghindari terlalu mengkomplikasi model, akan digunakan model yang menjelaskan persamaan di atas, yaitu:
+$$\hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1 x_2 + \beta_4 x_1^2$$
+```{r}
+model <- lm(y ~ x1 + x2 + x1*x2 + I(x1^2), data = marketing)
+summary(model)
+```
+
+Dari hasil fitting tersebut, diperoleh model regresinya (setelah dibulatkan 4 angka di belakang desimal) sebagai berikut:
+$$\hat{y} = 6.1645 + 0.0509 x_1 + 0.0352 x_2 + 0.0009 x_1 x_2 - 0.0001 x_1^2$$
+Model ini memiliki adj R-squared 0.9857 yang sudah jauh lebih memuaskan dibandingkan model subset terbaik awal yang tidak menginkorporasikan tingkat tinggi maupun interaksi dengan adj R-squared 0.8962. Semua variabel yang digunakan berguna dengan kepercayaan 99% karena Pr(>F) < 0.01 untuk setiap variabel.
+
+## Interpetasi
+Setiap x2 bertambah 1 (budget periklanan facebook bertambah 1000 dollar), secara rata-rata y bertambah 0.1409x1 - 0.0001x1^2 (sales bertambah nilai tersebut dikali 1000 dollar).
+
+Karena ada suku x1 kuadrat, tidak dapat diberikan interpretasi untuk penambahan x1.
+
+\elandscape
+
+\newpage
+## Uji Asumsi
+Terdapat 10 asumsi-asumsi dalam regresi linier, namun secara umum terdapat 5 asumsi yang terpenting yang dapat dipanggil dengan package gvlma (Global Validation of Linear Models Assumptions).
+```{r}
+gvlma(model)
+```
+
+Dari output-output tersebut, ternyata hanya 1 dari 5 asumsi yang terpenuhi. Secara detil:
+
+1. Penolakan Global Stat mengindikasikan adanya hubungan non-linier antara satu atau lebih dari prediktor dengan target. Walaupun ini ditolak, dari penjabaran yang sudah dilakukan dianggap sudah cukup terjustifikasi untuk hanya mengambil suku hingga tingkat 2 dari x1. Mungkin penolakan ini terjadi mengindikasikan perlunya pengunaan tingkat yang lebih tinggi dari x1.
+
+2. Penolakan Skewness mengindikasikan bahwa data sebaiknya ditransformasi. Namun karena saya tidak ahli dengan R, saya belum mengetahui bagaimana caranya.
+
+3. Penolakan Kurtosis mengindikasikan hal yang sama dengan penolakan Skewness.
+
+4. Penolakan Link Function mengindikasikan bahwa perlu digunakan bentuk alternatif dari Generalized Linear Model seperti Regresi Binomial. Namun karena mata kuliah ini adalah mata kuliah Regresi Linier, hal ini tidak akan diusahakan untuk dicapai.
+
+5. Penerimaan Heterokedastisitas mengindikasikan bahwa variansi residual dari model konstan dari seluruh range nilai prediktor-prediktor.
+
+Dari argumen tersebut, anggap 1, 4, dan 5 sudah memenuhi. Untuk pengembangan model ini, dapat diusahakan untuk memenuhi asumsi-asumsi kedua dan ketiga dengan melakukan transformasi data. Serta perlu dikaji ulang apakah suku tingkat tinggi diperlukan pada data yang sudah ditransformasi, serta hingga seberapa besar tingkat baik yang terkait.
+
+Namun karena adj R-squared sudah memuaskan pada kasus ini, maka sejauh tugas akhir dan mata kuliah ini, saya cukupkan hingga di sini.
+
+\newpage
+# Post-Pengolahan
+## Penutup
+Sekian pekerjaan saya, semoga sudah memenuhi tugas yang telah diberikan. Terima kasih.
