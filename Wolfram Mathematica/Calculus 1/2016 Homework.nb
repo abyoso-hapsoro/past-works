@@ -1,0 +1,1546 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     56697,       1537]
+NotebookOptionsPosition[     53234,       1424]
+NotebookOutlinePosition[     53577,       1439]
+CellTagsIndexPosition[     53534,       1436]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "1. Cari solusi untuk x dan y dari persamaan a dan b dengan wolfram \
+mathematica, lalu cari nilai limit\ndari c,d dan e dengan menggunakan metode \
+pendekatan dan perintah limit dalam wolfram mathematica\nkemudian sertakan \
+gambar dalam penjelasan!(Hint: Gunakan Table)\n\na. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["ax", "2"], "+", 
+     SuperscriptBox["bx", "3"], "+", 
+     SuperscriptBox["cx", "4"]}], "=", "0"}], TraditionalForm]]],
+ " dengan nilai a, b, c adalah 3 digit terakhir NPM kalian\n    Ditanya: \
+Nilai x?\n    Jawab: \n    3 digit terakhir NPM saya adalah 136 sehingga a=1, \
+b=3, c=6\n    Maka persamaan yang ingin diselesaikan adalah ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "3"]}], "+", 
+     RowBox[{"6", 
+      SuperscriptBox["x", "4"]}]}], "=", "0"}], TraditionalForm]]],
+ "\n    Dalam penulisannya di Wolfram ",
+ StyleBox["Mathematica,",
+  FontSlant->"Italic"],
+ " gunakanlah ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "3"]}], "+", 
+     RowBox[{"6", 
+      SuperscriptBox["x", "4"]}]}], "\[Equal]", "0"}], TraditionalForm]]],
+ "\n    \n    Mari kita cari solusi dari persamaan ini.\n    Untuk \
+menyelesaikan suatu persamaan dan mendapatkan nilai, gunakan fungsi Solve.\n  \
+  \tSolve[Persamaan, {Nilai yang dicari}]  \n    Kemudian setelah mengetik \
+fungsi, tahan shift dan tekan enter."
+}], "Text",
+ CellChangeTimes->{{3.686528343004815*^9, 3.686528634632433*^9}, {
+   3.6865287054814715`*^9, 3.686528722591149*^9}, {3.6865287624103036`*^9, 
+   3.6865288170688515`*^9}, {3.6865295509495177`*^9, 3.686529570309148*^9}, {
+   3.686530610485649*^9, 3.6865306451399765`*^9}, {3.6865311323416643`*^9, 
+   3.6865311354032803`*^9}, {3.686723810396615*^9, 3.686723842303379*^9}, 
+   3.686724170029456*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "3"]}], "+", 
+     RowBox[{"6", 
+      SuperscriptBox["x", "4"]}]}], "==", "0"}], ",", " ", 
+   RowBox[{"{", "x", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6865287247161202`*^9, 3.6865287552992992`*^9}, {
+  3.6865310207808285`*^9, 3.6865310259221635`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      FractionBox["1", "12"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "-", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SqrtBox["15"]}]}], ")"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      FractionBox["1", "12"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SqrtBox["15"]}]}], ")"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6865292208143578`*^9, 3.6865310272057123`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Sehingga kita mendapatkan hasil yang kita inginkan yaitu nilai x, dimana \
+nilai x tersebut yaitu ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"x", "=", "0"}], ",", 
+   RowBox[{"x", "=", "0"}], ",", 
+   RowBox[{"x", "=", 
+    RowBox[{
+     FractionBox["1", "12"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "-", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        SqrtBox["15"]}]}], ")"}]}]}], ",", 
+   RowBox[{"x", "=", 
+    RowBox[{
+     FractionBox["1", "12"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        SqrtBox["15"]}]}], ")"}]}]}]}]],
+  CellChangeTimes->{3.6865292208143578`*^9}]
+}], "Text",
+ CellChangeTimes->{{3.6865292610634165`*^9, 3.6865293375217*^9}, {
+  3.6868204587267323`*^9, 3.6868204645705566`*^9}}],
+
+Cell["\<\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------
+b. 2x - y = 3
+    x + 4y = -2
+    Ditanya: Nilai x dan y?
+    Jawab:
+    Mari kita cari solusi dari kedua persamaan tersebut.
+    Sekali lagi untuk menyelesaikan persamaan, gunakan fungsi Solve namun \
+dengan sedikit modifikasi.
+    Ingat untuk mengganti = dengan ==
+    \tSolve[Persamaan 1 && Persamaan 2, {Nilai yang dicari}]
+    Kemudian setelah mengetik fungsi, tahan shift dan tekan enter. Prinsip \
+ini berlaku untuk semua fungsi yang kita ingin Wolfram selesaikan.\
+\>", "Text",
+ CellChangeTimes->{{3.686529350224987*^9, 3.6865293782502637`*^9}, {
+   3.6865305908449116`*^9, 3.686530599470855*^9}, {3.686530647764061*^9, 
+   3.686530656733041*^9}, {3.686530697726572*^9, 3.686530716982298*^9}, {
+   3.686530958035892*^9, 3.6865309993463235`*^9}, {3.6865310415459228`*^9, 
+   3.686531042610777*^9}, {3.686531075328846*^9, 3.6865311734341536`*^9}, {
+   3.6867241748108115`*^9, 3.686724185357745*^9}, {3.686904434753124*^9, 
+   3.6869044430971036`*^9}, 3.6869561339534197`*^9, {3.6869569564157467`*^9, 
+   3.6869569826191998`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", "x"}], "+", "y"}], "==", "0"}], " ", "&&", " ", 
+    RowBox[{
+     RowBox[{"x", "+", 
+      RowBox[{"4", "y"}]}], "==", 
+     RowBox[{"-", "2"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6865307189959593`*^9, 3.686530877067605*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "\[Rule]", 
+     FractionBox["2", "7"]}], ",", 
+    RowBox[{"y", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox["4", "7"]}]}]}], "}"}], "}"}]], "Text", "Input",
+ CellChangeTimes->{{3.6868203055528927`*^9, 3.6868203352875643`*^9}, {
+  3.686820501024149*^9, 3.6868205134929767`*^9}}],
+
+Cell[TextData[{
+ "Sehingga kita mendapatkan hasil yang kita inginkan yaitu nilai x dan y, \
+dimana nilai x tersebut adalah ",
+ Cell[BoxData[
+  RowBox[{"x", "=", 
+   FractionBox["2", "7"]}]]],
+ " dan ",
+ Cell[BoxData[
+  RowBox[{"y", "=", 
+   RowBox[{"-", 
+    FractionBox["4", "7"]}]}]]],
+ " \n\n-----------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+---------------------"
+}], "Text",
+ CellChangeTimes->{{3.686820338162614*^9, 3.686820340818969*^9}, {
+   3.686820396444682*^9, 3.686820544508999*^9}, {3.686904459367422*^9, 
+   3.6869044647581162`*^9}, 3.686956137812854*^9}],
+
+Cell[TextData[{
+ " c. ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["lim", 
+    RowBox[{"x", "\[Rule]", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["\[Pi]", "4"], ")"}], "-"]}]], TraditionalForm]]],
+ " tan 2x\n    Ditanya: Nilai limit fungsi?\n    Jawab:\nMari kita cari limit \
+dari fungsi tersebut.\nBerbeda dengan soal-soal sebelumnya, disini karena \
+limit merupakan fungsi kedua setelah tan 2x sehingga ada 2 fungsi, maka \
+fungsi tan 2x perlu didefiniskan.\nUntuk mendefiniskan suatu fungsi, gunakan \
+format fungsi di bawah\n\tp [x_] := Fungsi"
+}], "Text",
+ CellChangeTimes->{{3.6865311651367097`*^9, 3.6865311690103116`*^9}, {
+  3.68653128213262*^9, 3.686531368639772*^9}, {3.68653142758169*^9, 
+  3.686531456671904*^9}, {3.686724252475169*^9, 3.68672425250642*^9}, {
+  3.6867243909359474`*^9, 3.686724442233922*^9}, {3.6867245879568567`*^9, 
+  3.686724599050749*^9}, {3.6869037689499245`*^9, 3.686903879013837*^9}, {
+  3.686903909092347*^9, 3.6869039350925784`*^9}, {3.6869675176575975`*^9, 
+  3.686967517782711*^9}}],
+
+Cell[TextData[{
+ "\tp ini merupakan variabel, sehinnga bukan suatu keharusan, variabel ini \
+sebenarnya bebas\nKemudian tahan shift dan tekan enter untuk mendefinisikan \
+p[x] sebagai fungsi yang diinginkan.\n\nSekarang karena satu dari 2 fungsi \
+telah terdefinisikan, maka kita tersisa dengan 1 fungsi, sehingga kita dapat \
+menyelesaikannya.\n\nPerhatikan soal, limit tersebut memetakan ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["\[Pi]", "4"], ")"}], "-"]}], TraditionalForm]]],
+ " atau kita dapat definisikan secara bahasa sebagai x mendekati ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Pi]", "4"], TraditionalForm]]],
+ " atau 45\[Degree] dari kiri (- mewakili dari kiri, dan sebaliknya + \
+mewakili dari kanan)\n\n\tcatatan: untuk membuat konstanta seperti \[Pi] ini, \
+dapat diakses melalui window pada bagian atas yang bernama \
+\[OpenCurlyDoubleQuote]Palettes\[CloseCurlyDoubleQuote] dan memilih salah \
+satu dari Basic Math Assistant atau Classroom \t\n\tAssistant lalu tinggal \
+mencari yang diinginkan kemudian diklik. Adapun cara lain yaitu dengan \
+mengetik Pi. Ini sudah merepresentasikan \[Pi].\n\nDari situ, mari kita \
+selesaikan menggunakan distribusi nilai fungsi dari 0 hingga sebelum 45\
+\[Degree], mari kita ambil sampai dengan 42\[Degree].\nAngka ini mebenarnya \
+bebas, silakan jika ingin mencoba angka lain.\nMari kita buat tabel disribusi \
+nilai dari 0\[Degree] hingga 44\[Degree] dengan jarak 11\[Degree].\nUntuk \
+membuat tabel distribusi nilai, gunakan format fungsi di bawah\n\tTable [ {x, \
+p[x]}, {x, Nilai awal yang ingin digunakan, Nilai batas yang ingin digunakan, \
+Nilai jarak distribusi dari nilai awal hingga nilai batas} ] // TableForm\n\
+Sekarang mari aplikasikan kedua prinsip tersebut untuk menjawab soal. Gunakan \
+kedua sistem tersebut kemudian tahan shift dan tekan enter."
+}], "Text",
+ CellChangeTimes->{{3.686903949514638*^9, 3.6869040251283274`*^9}, {
+   3.6869040796446447`*^9, 3.686904428253165*^9}, 3.6869045408793344`*^9, {
+   3.6869046371605587`*^9, 3.6869046425825043`*^9}, {3.686904802547262*^9, 
+   3.686904974073145*^9}, {3.686955966298504*^9, 3.686955995612811*^9}, {
+   3.6869564731402144`*^9, 3.686956627912735*^9}, {3.6869675202513714`*^9, 
+   3.686967532267229*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "[", "x_", "]"}], ":=", 
+  RowBox[{"Tan", "[", 
+   RowBox[{"2", "x"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"p", "[", "x", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", 
+      RowBox[{"44", "\[Degree]"}], ",", 
+      RowBox[{"11", "\[Degree]"}]}], "}"}]}], "]"}], "//", 
+  "TableForm"}]}], "Input",
+ CellChangeTimes->{{3.6867321358011436`*^9, 3.686732146447029*^9}, 
+   3.686732332993621*^9, {3.686903470196954*^9, 3.6869037306607046`*^9}, {
+   3.6869046455356693`*^9, 3.6869046631295395`*^9}, 3.6869049683855686`*^9, {
+   3.686956092124766*^9, 3.6869560981091022`*^9}, {3.686967537407838*^9, 
+   3.686967540345375*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0"},
+    {
+     RowBox[{"11", " ", "\[Degree]"}], 
+     RowBox[{"Tan", "[", 
+      RowBox[{"22", " ", "\[Degree]"}], "]"}]},
+    {
+     RowBox[{"22", " ", "\[Degree]"}], 
+     RowBox[{"Tan", "[", 
+      RowBox[{"44", " ", "\[Degree]"}], "]"}]},
+    {
+     RowBox[{"33", " ", "\[Degree]"}], 
+     RowBox[{"Cot", "[", 
+      RowBox[{"24", " ", "\[Degree]"}], "]"}]},
+    {
+     RowBox[{"44", " ", "\[Degree]"}], 
+     RowBox[{"Cot", "[", 
+      RowBox[{"2", " ", "\[Degree]"}], "]"}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6869044996646833`*^9, 3.686904648332447*^9, {3.6869560029409137`*^9, 
+   3.6869560064565763`*^9}, {3.686967542236068*^9, 3.6869675452985907`*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Dari tabel diatas, dapat dilihat bahwa fungsi menuju cot [0] sehingga kita \
+mendapatkan solusi dari   ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["lim", 
+    RowBox[{"x", "\[Rule]", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["\[Pi]", "4"], ")"}], "-"]}]], TraditionalForm]]],
+ " tan 2x   yaitu cot [0] atau ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"tan", " ", "[", "0", "]"}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "0"], TraditionalForm]]],
+ " = \[Infinity]\n\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------"
+}], "Text",
+ CellChangeTimes->{{3.6869045118524704`*^9, 3.686904623191584*^9}, {
+   3.686904670223484*^9, 3.686904778625101*^9}, 3.686956141766026*^9}],
+
+Cell[TextData[{
+ "d. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", " ", "\[Infinity]"}]], 
+    FractionBox[
+     RowBox[{"x", "-", "\[ExponentialE]"}], 
+     RowBox[{"x", "+", 
+      RowBox[{"2", "\[ExponentialE]"}]}]]}], TraditionalForm]]],
+ "\n    Ditanya: Nilai limit fungsi?\n    Jawab:\nMari kita jawab soal \
+tersebut.  Berbeda dengan sebelumnya, limit menuju suatu angka yang dapat \
+dihitung, soal ini menuju \[Infinity] atau tak hingga.\nSehingga untuk \
+menyelesaikan soal seperti ini, mari gunakan angka 100 hingga 1000. Kenapa? \
+Agar memproyeksikan perubahan angka saat semakin besar tanpa batas (menuju \
+tak hingga).\nGunakan cara yang sama dengan sebelumnya.\nNamun mungkin ada \
+kebingungan bagaimana memasukkan konstanta. Langkah yang dapat dilakukan sama \
+dengan cara yang sudah dikatakan dalam soal sebelumnya. Jika tidak ingin \
+melakukan itu, terdapat alternatif, yaitu dengan mengetik E. Ini sudah \
+merepresentasikan ",
+ "\[ExponentialE]."
+}], "Text",
+ CellChangeTimes->{{3.6867321534472437`*^9, 3.6867322942400246`*^9}, {
+  3.6867325474752955`*^9, 3.686732550819108*^9}, {3.6869533675148287`*^9, 
+  3.686953515165367*^9}, {3.6869564150707865`*^9, 3.686956443811592*^9}, {
+  3.686956637975391*^9, 3.6869567378922596`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"q", "[", "x_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{"x", "-", "\[ExponentialE]"}], 
+   RowBox[{"x", "+", 
+    RowBox[{"2", "\[ExponentialE]"}]}]]}]], "Input",
+ CellChangeTimes->{{3.686732295849325*^9, 3.6867322965524373`*^9}, 
+   3.6867323351811075`*^9, {3.686865384683422*^9, 3.686865414058807*^9}, 
+   3.6868655891097937`*^9, 3.686888746837058*^9, {3.686956013566041*^9, 
+   3.686956013675419*^9}, {3.6869563697108583`*^9, 3.686956408211351*^9}, {
+   3.686967555048809*^9, 3.6869675552206917`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"q", "[", "x", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "100", ",", "1000", ",", "50"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.686865595328495*^9, 3.6868656498416643`*^9}, {
+  3.6868886988677177`*^9, 3.686888743384021*^9}, {3.6869560178480787`*^9, 
+  3.6869560180485916`*^9}, {3.6869675590174894`*^9, 3.6869675591894493`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"100", 
+     FractionBox[
+      RowBox[{"100", "-", "\[ExponentialE]"}], 
+      RowBox[{"100", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"150", 
+     FractionBox[
+      RowBox[{"150", "-", "\[ExponentialE]"}], 
+      RowBox[{"150", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"200", 
+     FractionBox[
+      RowBox[{"200", "-", "\[ExponentialE]"}], 
+      RowBox[{"200", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"250", 
+     FractionBox[
+      RowBox[{"250", "-", "\[ExponentialE]"}], 
+      RowBox[{"250", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"300", 
+     FractionBox[
+      RowBox[{"300", "-", "\[ExponentialE]"}], 
+      RowBox[{"300", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"350", 
+     FractionBox[
+      RowBox[{"350", "-", "\[ExponentialE]"}], 
+      RowBox[{"350", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"400", 
+     FractionBox[
+      RowBox[{"400", "-", "\[ExponentialE]"}], 
+      RowBox[{"400", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"450", 
+     FractionBox[
+      RowBox[{"450", "-", "\[ExponentialE]"}], 
+      RowBox[{"450", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"500", 
+     FractionBox[
+      RowBox[{"500", "-", "\[ExponentialE]"}], 
+      RowBox[{"500", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"550", 
+     FractionBox[
+      RowBox[{"550", "-", "\[ExponentialE]"}], 
+      RowBox[{"550", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"600", 
+     FractionBox[
+      RowBox[{"600", "-", "\[ExponentialE]"}], 
+      RowBox[{"600", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"650", 
+     FractionBox[
+      RowBox[{"650", "-", "\[ExponentialE]"}], 
+      RowBox[{"650", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"700", 
+     FractionBox[
+      RowBox[{"700", "-", "\[ExponentialE]"}], 
+      RowBox[{"700", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"750", 
+     FractionBox[
+      RowBox[{"750", "-", "\[ExponentialE]"}], 
+      RowBox[{"750", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"800", 
+     FractionBox[
+      RowBox[{"800", "-", "\[ExponentialE]"}], 
+      RowBox[{"800", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"850", 
+     FractionBox[
+      RowBox[{"850", "-", "\[ExponentialE]"}], 
+      RowBox[{"850", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"900", 
+     FractionBox[
+      RowBox[{"900", "-", "\[ExponentialE]"}], 
+      RowBox[{"900", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"950", 
+     FractionBox[
+      RowBox[{"950", "-", "\[ExponentialE]"}], 
+      RowBox[{"950", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]},
+    {"1000", 
+     FractionBox[
+      RowBox[{"1000", "-", "\[ExponentialE]"}], 
+      RowBox[{"1000", "+", 
+       RowBox[{"2", " ", "\[ExponentialE]"}]}]]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.68686563757578*^9, 3.686865651044677*^9}, {
+   3.686888701149*^9, 3.686888718742948*^9}, 3.686888750321506*^9, 
+   3.686956019266885*^9, {3.6869563754296527`*^9, 3.68695638689855*^9}, 
+   3.6869675600331354`*^9}]
+}, Open  ]],
+
+Cell["\<\
+Di sini dapat dilihat bahwa kita tidak dapat menarik kesimpulan apa pun \
+karena \[ExponentialE] tetap bernilai sama. Maka kita perlu definisikan ulang \
+fungsi dengan pertama mendefinisikan nilai \[ExponentialE].
+Untuk mengetahui nilai suatu konstanta atau tetapan seperti \[ExponentialE], \
+gunakan fungsi di bawah.
+\tN[konstanta yang ingin dicari]\
+\>", "Text",
+ CellChangeTimes->{{3.6869535317592316`*^9, 3.6869536474311843`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "e", "]"}]], "Input",
+ CellChangeTimes->{{3.6868885613298345`*^9, 3.6868885692830567`*^9}, {
+  3.6868886000383005`*^9, 3.6868886148666224`*^9}, {3.6869560259128294`*^9, 
+  3.68695602791286*^9}}],
+
+Cell[BoxData["2.718281828459045`"], "Output",
+ CellChangeTimes->{
+  3.6868885654861403`*^9, {3.686888607007166*^9, 3.686888615726001*^9}}]
+}, Open  ]],
+
+Cell["\<\
+
+Setelah kita mendapatkan nilai \[ExponentialE], definisikan ulang fungsi dan \
+kerjakan ulang dengan cara yang sama.
+\
+\>", "Text",
+ CellChangeTimes->{{3.686953656728176*^9, 3.6869536895098495`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"q", "[", "x_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{"x", "-", "2.71828"}], 
+   RowBox[{"x", "+", "5.43656"}]]}]], "Input",
+ CellChangeTimes->{{3.6868886178354316`*^9, 3.686888642929607*^9}, {
+  3.686956032162819*^9, 3.686956033756689*^9}, {3.686967567220767*^9, 
+  3.68696756739268*^9}, {3.686967636471609*^9, 3.686967636784195*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"q", "[", "x", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "100", ",", "1000", ",", "50"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.686888649367058*^9, 3.6868886899144535`*^9}, {
+  3.686888729555716*^9, 3.686888731477609*^9}, {3.6868887635248966`*^9, 
+  3.686888764431034*^9}, {3.686956043850565*^9, 3.686956046350497*^9}, {
+  3.6869675712677803`*^9, 3.6869675715489836`*^9}, {3.686967640049779*^9, 
+  3.686967640174781*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"100", "0.9226564296103743`"},
+    {"150", "0.9475358950301012`"},
+    {"200", "0.9603048259764475`"},
+    {"250", "0.9680748910805878`"},
+    {"300", "0.9733010350823753`"},
+    {"350", "0.9770568339959176`"},
+    {"400", "0.9798862736996388`"},
+    {"450", "0.9820944546041714`"},
+    {"500", "0.9838657496402713`"},
+    {"550", "0.9853181432637419`"},
+    {"600", "0.9865306449283472`"},
+    {"650", "0.9875581551325119`"},
+    {"700", "0.9884400094035386`"},
+    {"750", "0.989205129283126`"},
+    {"800", "0.9898752547314216`"},
+    {"850", "0.9904670429330259`"},
+    {"900", "0.9909934717016508`"},
+    {"950", "0.9914648022261153`"},
+    {"1000", "0.9918892545542604`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6868886906019707`*^9, {3.6868887319149933`*^9, 3.6868887649466925`*^9}, 
+   3.6869560473973856`*^9, 3.68696757229891*^9, 3.6869676406591625`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "\nSekarang kita dapat menarik sebuah kesimpulan, yaitu semakin nilai x \
+membesar menuju tak hingga, semakin q[x] menuju 1, sehingga nilai limit dari ",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"x", "-", "\[ExponentialE]"}], 
+   RowBox[{"x", "+", 
+    RowBox[{"2", "\[ExponentialE]"}]}]]],
+  CellChangeTimes->{{3.686732295849325*^9, 3.6867322965524373`*^9}, 
+    3.6867323351811075`*^9, {3.686865384683422*^9, 3.686865414058807*^9}, 
+    3.6868655891097937`*^9, 3.686888746837058*^9}],
+ " adalah 1.\n\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\ne. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", " ", "0"}]], 
+    RowBox[{
+     SuperscriptBox["x", "4"], 
+     RowBox[{
+      SuperscriptBox["sin", "2"], "(", 
+      FractionBox["1", "x"], ")"}]}]}], TraditionalForm]]],
+ "\n    Ditanya: Nilai limit fungsi?\n    Jawab:\nMari kita jawab soal ini. \
+Cara mengerjakannya serupa dengan soal-soal sebelumnya, namun yang perlu \
+diperhatikan di sini adalah x menuju 0. \nTidak ada pengkhususan - (dari \
+kiri) atau + (kanan), sehingga kita perlu mencoba dari kedua arah.\nSeperti \
+biasa definisikan fungsi terlebih dahulu kemudian buatlah tabel yang \
+mendekati 0 dari kiri dan dari kanan. Di sini diambil contoh dari -1 hingga \
+-0.1 dan 1 hingga 0.1.\nSekali lagi, angka-angka ini bebas."
+}], "Text",
+ CellChangeTimes->{{3.6867323402124205`*^9, 3.686732340884305*^9}, {
+   3.6867325273814077`*^9, 3.6867326001792197`*^9}, 3.686865667295927*^9, {
+   3.6868885508765764`*^9, 3.686888558908049*^9}, {3.6869537196528664`*^9, 
+   3.6869537951224566`*^9}, {3.6869540066619744`*^9, 3.6869541813750215`*^9}, 
+   3.6869561485161066`*^9, {3.686967579424132*^9, 3.6869675795490294`*^9}, {
+   3.686967646299859*^9, 3.6869676491748962`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"r", "[", "x_", "]"}], ":=", " ", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "4"], 
+    RowBox[{
+     SuperscriptBox["sin", "2"], "(", 
+     FractionBox["1", "x"], ")"}]}],
+   TraditionalForm]}]], "Input",
+ CellChangeTimes->{{3.6867326025072713`*^9, 3.6867326107730017`*^9}, {
+  3.68686557701589*^9, 3.6868655816252213`*^9}, {3.6868656718272357`*^9, 
+  3.6868656877648573`*^9}, {3.6869560526474524`*^9, 3.686956053225685*^9}, {
+  3.6869676564094477`*^9, 3.686967657565711*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"r", "[", "x", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "1"}], ",", 
+      RowBox[{"-", "0.1"}], ",", "0.1"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.6868656954212046`*^9, 3.686865755359601*^9}, {
+  3.6869560574913654`*^9, 3.686956057881895*^9}, {3.686967659471966*^9, 
+  3.6869676602845025`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"-", "1.`"}], "0.7080734182735712`"},
+    {
+     RowBox[{"-", "0.9`"}], "0.5269535785847368`"},
+    {
+     RowBox[{"-", "0.8`"}], "0.36887421246401214`"},
+    {
+     RowBox[{"-", "0.7`"}], "0.23527593495669982`"},
+    {
+     RowBox[{"-", "0.6`"}], "0.1284124755052779`"},
+    {
+     RowBox[{"-", "0.5`"}], "0.05167636315198788`"},
+    {
+     RowBox[{"-", "0.3999999999999999`"}], "0.009169124026070683`"},
+    {
+     RowBox[{"-", "0.29999999999999993`"}], "0.00029416080264355136`"},
+    {
+     RowBox[{"-", "0.19999999999999996`"}], "0.0014712572232611597`"},
+    {
+     RowBox[{"-", "0.09999999999999998`"}], "0.000029595896909330535`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.686865748046881*^9, 3.686865755875107*^9}, 
+   3.6869560630461407`*^9, {3.6869676612531805`*^9, 3.68696766982286*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"r", "[", "x", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "1", ",", "0.1", ",", 
+      RowBox[{"-", "0.1"}]}], "}"}]}], "]"}], "//", "TableForm"}]], "Input",
+ CellChangeTimes->{{3.6868657669377756`*^9, 3.686865774734807*^9}, {
+  3.6869560600461464`*^9, 3.686956060655615*^9}, {3.6869676730734158`*^9, 
+  3.6869676739484234`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"1.`", "0.7080734182735712`"},
+    {"0.9`", "0.5269535785847368`"},
+    {"0.8`", "0.36887421246401214`"},
+    {"0.7`", "0.23527593495669982`"},
+    {"0.6`", "0.1284124755052779`"},
+    {"0.5`", "0.05167636315198788`"},
+    {"0.3999999999999999`", "0.009169124026070683`"},
+    {"0.29999999999999993`", "0.00029416080264355136`"},
+    {"0.19999999999999996`", "0.0014712572232611597`"},
+    {"0.09999999999999998`", "0.000029595896909330535`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.686865769219037*^9, 3.686865775250373*^9}, 
+   3.68695606538992*^9, 3.6869676748545604`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Dari sini dapat terlihat bahwa distribusi nilai fungsi r[x] saat x \
+dimasukkan akan semakin mendekati 0 dari kedua arah. Sehingga limit dari ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "4"], 
+    RowBox[{
+     SuperscriptBox["sin", "2"], "(", 
+     FractionBox["1", "x"], ")"}]}], TraditionalForm]],
+  CellChangeTimes->{{3.6867326025072713`*^9, 3.6867326107730017`*^9}, {
+   3.68686557701589*^9, 3.6868655816252213`*^9}, {3.6868656718272357`*^9, 
+   3.6868656877648573`*^9}}],
+ " adalah 0.\n\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\n\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\n2. Didefinisikan"
+}], "Text",
+ CellChangeTimes->{{3.686732612601132*^9, 3.686732763708917*^9}, {
+  3.6869542067326484`*^9, 3.686954276967929*^9}, {3.6869561511254206`*^9, 
+  3.6869561544224358`*^9}, {3.6869676834641266`*^9, 3.686967684620392*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\t\t", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", "ax"}], "+", "b"}], ",", " ", 
+    RowBox[{"x", " ", "<", " ", 
+     RowBox[{"-", " ", "5"}]}]}], "\[IndentingNewLine]", "   ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", 
+      RowBox[{"(", "x", ")"}]}], "=", " ", 
+     RowBox[{"6", "b"}]}], "           ", ",", " ", 
+    RowBox[{
+     RowBox[{"-", "5"}], " ", "\[LessEqual]", " ", "x", " ", "<", " ", 
+     "1"}]}], "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"3", "               ", ",", " ", 
+    RowBox[{"x", " ", "\[GreaterEqual]", " ", "1"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6867327653807135`*^9, 3.686732941305038*^9}}],
+
+Cell["\<\
+Tentukan nilai dari a dan b sedemikian sehingga fungsi f kontinu pada seluruh \
+domainnya! Buktikan
+kekontinuannya dengan definisi dan perintah Wolfram Mathematica kemudian plot \
+juga grafiknya
+dengan nilai a dan b yang benar!
+
+Ditanya: 
+a) nilai a dan b sehingga kontinu pada seluruh domain, 
+b) buktikan menggunakan definisi kekontinuannya,
+c) grafik dengan nilai a dan b yang benar.
+
+Jawab:
+Pertama mari kita definiskan fungsi tersebut.
+Kita perlu melihat fungsi ini, berbeda dengan fungsi-fungsi sebelumnya, \
+fungsi ini merupakan suatu fungsi yang memiliki pemetaan berbeda untuk \
+domain-domain tertentu.
+Fungsi ini dikenal sebagai fungsi Piecewise.
+Mari kita definisikan fungsi ini.\
+\>", "Text",
+ CellChangeTimes->{{3.6867329506176147`*^9, 3.686732952008299*^9}, {
+  3.6867331193615065`*^9, 3.6867332128377075`*^9}, {3.6867333434513206`*^9, 
+  3.686733349826404*^9}, {3.6869545745283546`*^9, 3.686954666595343*^9}, {
+  3.686956180219648*^9, 3.686956197297988*^9}, {3.686956295048711*^9, 
+  3.6869563597108335`*^9}, {3.686956764861357*^9, 3.6869568568348217`*^9}, {
+  3.6869676963237085`*^9, 3.6869676965424695`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", "a", " ", "x"}], "+", "b"}], ",", 
+       RowBox[{"x", "<", 
+        RowBox[{"-", "5"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"6", "b"}], ",", 
+       RowBox[{
+        RowBox[{"-", "5"}], "\[LessEqual]", "x", "<", "1"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", 
+       RowBox[{"x", "\[GreaterEqual]", "1"}]}], "}"}]}], "}"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6869569294153996`*^9, 3.686956930259161*^9}, {
+   3.68696770118307*^9, 3.686967702104991*^9}, 3.6869688225549765`*^9}],
+
+Cell["\<\
+Dengan ini, fungsi f(x) telah terdefinisi. Mari kita lanjut ke soal.
+
+a) Untuk mencari nilai a dan b, kita dapat memanfaatkan prinsip limit. \
+Kenapa? Karena agar suatu fungsi kontinu, fungsi tersebut harus terdefinisi \
+dalam fungsi dan dalam limitnya.
+Agar suatu fungsi kontinu, maka limit kiri harus sama dengan limit kanan. \
+Sehingga yang perlu kita lakukan adalah seperti berikut.\
+\>", "Text",
+ CellChangeTimes->{{3.6869569497750287`*^9, 3.6869569503687897`*^9}, {
+  3.686956993119335*^9, 3.6869571425349717`*^9}, {3.6869571757227697`*^9, 
+  3.6869571783948126`*^9}, {3.6869677072925997`*^9, 3.68696770804261*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Limit", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", 
+        RowBox[{"x", "\[Rule]", 
+         RowBox[{"-", "5"}]}], ",", 
+        RowBox[{"Direction", "\[Rule]", "1"}]}], "]"}], "\[Equal]", 
+      RowBox[{"Limit", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", 
+        RowBox[{"x", "\[Rule]", 
+         RowBox[{"-", "5"}]}], ",", 
+        RowBox[{"Direction", "\[Rule]", 
+         RowBox[{"-", "1"}]}]}], "]"}]}], "&&", 
+     RowBox[{
+      RowBox[{"Limit", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", 
+        RowBox[{"x", "\[Rule]", "1"}], ",", 
+        RowBox[{"Direction", "\[Rule]", "1"}]}], "]"}], "\[Equal]", 
+      RowBox[{"Limit", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", 
+        RowBox[{"x", "\[Rule]", "1"}], ",", 
+        RowBox[{"Direction", "\[Rule]", 
+         RowBox[{"-", "1"}]}]}], "]"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b"}], "}"}]}], "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.6869571798479056`*^9, 3.6869572172078085`*^9}, {
+  3.6869677142301474`*^9, 3.6869677235740156`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox["1", "4"]}]}], ",", 
+    RowBox[{"b", "\[Rule]", 
+     FractionBox["1", "2"]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.686957181722873*^9, 3.686957218660833*^9}, {
+  3.6869677245895767`*^9, 3.6869677495742917`*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "\tcatatan: Direction ini mewakilkan limit adalah limit kiri (-> 1) dan \
+limit kanan (-> -1)\n\nDengan ini, kita mendapatkan nilai a dan b yaitu ",
+ Cell[BoxData[
+  RowBox[{"a", "=", 
+   RowBox[{"-", 
+    FractionBox["1", "4"]}]}]],
+  CellChangeTimes->{{3.686957181722873*^9, 3.686957218660833*^9}}],
+ " dan ",
+ Cell[BoxData[
+  RowBox[{"b", "=", 
+   FractionBox["1", "2"]}]]],
+ ".\nSelanjutnya, untuk menjawab soal-soal selanjutnya, kita definisikan \
+variabel tersebut. Sehingga saat menggunakan variabel tersebut, secara \
+otomatis sudah sesuai nilai yang kita inginkan."
+}], "Text",
+ CellChangeTimes->{{3.686957234317399*^9, 3.6869573992874317`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", "=", 
+  RowBox[{"-", 
+   FractionBox["1", "4"]}]}]], "Input",
+ CellChangeTimes->{{3.68695740147486*^9, 3.686957409912566*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox["1", "4"]}]], "Output",
+ CellChangeTimes->{3.6869574105687265`*^9, 3.686960703305871*^9, 
+  3.686967753652449*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"b", "=", 
+  FractionBox["1", "2"]}]], "Input",
+ CellChangeTimes->{{3.6869574122406225`*^9, 3.6869574161000195`*^9}}],
+
+Cell[BoxData[
+ FractionBox["1", "2"]], "Output",
+ CellChangeTimes->{3.686957416787531*^9, 3.686960706321514*^9, 
+  3.6869677554962463`*^9}]
+}, Open  ]],
+
+Cell["\<\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------
+b) Untuk membuktikan kekontinuan, telah dibilang bahwa limit kiri sama dengan \
+limit kanan, sehingga kita hanya perlu mengecek titik-titik kekontinuan yaitu \
+-5 dan 1.
+Untuk mengecek apakah 2 buah persamaan sama, gunakan format fungsi berikut.
+\tPersamaan 1 == Persamaan 2
+Dari sini, yang akan muncul apabila nilai sama, \[OpenCurlyDoubleQuote]True\
+\[CloseCurlyDoubleQuote]. Sedangkan jika nilai tidak sama, \
+\[OpenCurlyDoubleQuote]False\[CloseCurlyDoubleQuote].
+\
+\>", "Text",
+ CellChangeTimes->{{3.686957422756485*^9, 3.686957436569158*^9}, {
+   3.686958022333901*^9, 3.686958157159774*^9}, {3.6869582190218897`*^9, 
+   3.686958281634997*^9}, 3.686960626586215*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", 
+    RowBox[{"x", "\[Rule]", " ", 
+     RowBox[{"-", "5"}]}], ",", " ", 
+    RowBox[{"Direction", "\[Rule]", " ", "1"}]}], "]"}], "\[Equal]", " ", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", " ", 
+    RowBox[{"x", "\[Rule]", " ", 
+     RowBox[{"-", "5"}]}], ",", " ", 
+    RowBox[{"Direction", "\[Rule]", " ", 
+     RowBox[{"-", "1"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.686958148503333*^9, 3.686958202787261*^9}, {
+  3.68696773507408*^9, 3.686967737574196*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.686958205412211*^9, {3.6869677386991262`*^9, 3.686967759886902*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Di sini, terlihat bahwa limit kiri sudah sama dengan limit kanan, sehinga \
+x=-5 kontinu.
+\
+\>", "Text",
+ CellChangeTimes->{{3.6869583068418503`*^9, 3.686958308576296*^9}, {
+  3.6869605941638193`*^9, 3.6869606328206744`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", " ", 
+    RowBox[{"x", "\[Rule]", "1"}], ",", " ", 
+    RowBox[{"Direction", "\[Rule]", "1"}]}], "]"}], "==", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", " ", 
+    RowBox[{"x", "\[Rule]", " ", "1"}], ",", " ", 
+    RowBox[{"Direction", " ", "\[Rule]", " ", 
+     RowBox[{"-", "1"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6869606336799507`*^9, 3.686960674774255*^9}, {
+  3.686967762418264*^9, 3.686967765715099*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.6869606660866218`*^9, 3.686960711805955*^9}, 
+   3.686967766277606*^9}]
+}, Open  ]],
+
+Cell["\<\
+Di sini, terlihat bahwa limit kiri sudah sama dengan limit kanan, sehingga \
+x=1 kontinu
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\
+\>", "Text",
+ CellChangeTimes->{{3.686960726806229*^9, 3.686960774650592*^9}}],
+
+Cell["\<\
+c) Mari kita gambarkan fungsi piecewise ini. Untuk menggambarkan suatu \
+fungsi, gunakan format fungsi berikut.
+\tPlot[Fungsi, {Variabel bidang yang diinginkan, Nilai bawah variabel bidang, \
+Nilai atas variabel bidang}]
+    Kemudian dapat dilengkapi lagi dengan PlotRange. Mengapa? Karena grafik \
+hanya terfokus pada satu bidang variabel atau dalam contoh x. Dengan ini, \
+grafik dapat lebih seperti keinginan.
+    \tMisal: Plot[Fungsi, {x, -2, 2}], PlotRange -> {Nilai bawah y, Nilai \
+atas y}]
+    Fungsi ini juga dapat dilengkapi dengan PlotStyle, untuk memodifikasi \
+warna dan ketebalan grafik yang diinginkan.
+    \tMisal: Plot[Fungsi, {x, -2, 2}, PlotRange -> {-2, 2}, PlotStyle -> \
+{Warna Grafik, Thickness[Tingkat Ketebalan]}]
+    
+    
+    Mari aplikasikan untuk menjawab soal, di sini akan digunakan warna ungu \
+yang sedikit tebal.\
+\>", "Text",
+ CellChangeTimes->{{3.686960781213177*^9, 3.6869608151198626`*^9}, {
+  3.6869608457452555`*^9, 3.6869610483994637`*^9}, {3.6869611992138977`*^9, 
+  3.6869613511715193`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "8"}], ",", "4"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "6"}], "}"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"Purple", ",", " ", 
+      RowBox[{"Thickness", "[", "0.01", "]"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6869610504623823`*^9, 3.6869610958531976`*^9}, {
+  3.686961129494253*^9, 3.6869611888856406`*^9}, {3.6869677779653397`*^9, 
+  3.686967778340344*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {}, 
+    {RGBColor[0.5, 0, 0.5], Thickness[0.01], LineBox[CompressedData["
+1:eJxlx11IU2EYwPG1St/TpvPoe6xWdsyxjWW1EFLbpJ4izBAyP6CIUaa2IIpF
+pN2kRRca8yKp7KJJDa1UNIOWmnSxhyb5MUYKdTGxxhBjhqRRY5bWKp7LLv78
++G+tcpSdUSoUim1/+2f1s5aFeFzG58dGY/G4CHxZa7CuyOisT7qT8VuE4cLH
+trolGas6ynZaV0QwfBwam1+UMW1huqZuSYTP6pmOYFjG2savk/OLIlw8t/u4
+xydjfr+2NxgWoUE/hfYmGb2pFyo9PhHuu3S3A8kyBgLimL1JhIehm45SYQtO
+OIYHu9aIkD5RXmKSMlAV6e6860yB0aPlB/36zVjTZWqfTU2BIpP+si5rE5Ia
+sPTZnrw1a5FMhp9Oe1qOaSOSSRCNPWo9adyApBpOi4e1odz1SKqg7YY3KOWk
+I7kOitwul3uvhKQAipnYl1mLhKQAg/qKA9l5EpICGHrUc/1mCUkB1g7U5/oz
+JSQFeO0/NRlVSkgKUBDTJRaPcCQZfN9z/USLjyPJoOfq9NP3Xo4kA62ytaLy
+JUeSwQ91QnttN0eSwUBWpMDdzJFkYD7SeylawpFkUDj17cFcMUeSgc1u9X84
+xJFk4GwY173Zx5Fk8Kkv8u6emSPJ4Jdl16rmbI4kAz5yZcc1I0eSwf5QQuNZ
+mSPJoE2jz8vXcCQZeFznq7erOJIMxo0vbmUmciQZhD3Lr/hqjuT//wd7Vyf5
+
+      "]], LineBox[CompressedData["
+1:eJxTTMoPSmViYGDQAWIQrRZxyeHjN+EDDGDA4RBckDjz5jsEf92Ceq9V9xB8
+rotzf1edQ/ArJokd2NuL4D8N7m9h8EXwf6zZzGdwRQjO52G7MSM+GsFnFPj8
+vCRUEM43XOXkExIiAOcvf/g+lf8kH5zfIfd/xaMDPHC+z5abH2Jvc8H5a39G
+rHM9ywHnt8Q7Tjt4gg3Ot5P72vT0GQucP6XH92npHSY4/2xwoc+6LwwI95f9
+2f1V599+GL9/afypdPlfcP6b1shHmuHf4Pymo3OeHrH9BOdz9qRUC+S/gfNn
+fdhjZ/72CZxvpR6wUX7STTh/bQaTuNK+I3B+4WshmULZTfYwvqZu6pvUTVfg
+fIOcrVvFnzyE8yObl87zEnwF51dLm+x6d/MDnB9n4nyBf8YXOJ/9Hcfv8OU/
+4PzXX81lAgr/wPne5/lWmrsxOMD4Ws0zJI29mOB8tXthrW3aLHB+a2dBda4p
+G5zPeGdfzhoZDjifnW+JcfgvTji/YMKTlqkMPHD+952RF7Wf8ML5cT22N0Q/
+8cH5R+MU7///zw/nAwBs4Lvh
+      "]]}, {}}, {{}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  Method->{},
+  PlotRange->{{-8, 4}, {0, 6}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], Automatic}]], "Output",
+ CellChangeTimes->{
+  3.68696109779064*^9, {3.686961164979003*^9, 3.686961189182438*^9}, 
+   3.686967781465328*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "----------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+----------------\n\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\n3. Apakah fungsi f berikut kontinu di x = 2 ? Jika tidak, \
+jelaskan alasannya.\n\na. f(x) = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"4", 
+     SuperscriptBox["x", "2"]}], "-", 
+    RowBox[{"2", "x"}], "+", "12"}], TraditionalForm]]],
+ "\[LineSeparator]    Ditanya: Kekontinuan pada x=2?\n    Jawab:\n    \
+Kerjakan menggunakan cara yang sama dengan soal sebelumnya. Namun kita \
+gunakan pendekatan lain, yaitu tanpa mengurai fungsinya lagi dan langsung \
+masuk ke dalam fungsi."
+}], "Text",
+ CellChangeTimes->{{3.6867333527169366`*^9, 3.686733450905697*^9}, {
+  3.686967303721038*^9, 3.686967325877451*^9}, {3.68696741820288*^9, 
+  3.686967419812311*^9}, {3.6869677935435867`*^9, 3.686967813747048*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", 
+      SuperscriptBox["x", "2"]}], "-", 
+     RowBox[{"2", "x"}], "+", "12"}], ",", " ", 
+    RowBox[{"x", "\[Rule]", " ", "2"}], ",", " ", 
+    RowBox[{"Direction", "\[Rule]", " ", "1"}]}], "]"}], "==", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", 
+      SuperscriptBox["x", "2"]}], "-", 
+     RowBox[{"2", "x"}], "+", "12"}], ",", " ", 
+    RowBox[{"x", "\[Rule]", "2"}], ",", " ", 
+    RowBox[{"Direction", " ", "\[Rule]", " ", 
+     RowBox[{"-", "1"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6867334524526*^9, 3.686733534439409*^9}, {
+  3.6867337614777*^9, 3.686733763509058*^9}, {3.6869673016741447`*^9, 
+  3.6869673454832325`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.686733481046593*^9, 3.6867335348925467`*^9}, 
+   3.686733765883959*^9, 3.686967347061267*^9}]
+}, Open  ]],
+
+Cell["\<\
+    Karena limit kiri sama dengan limit kanan, maka fungsi ini kontinu pada x \
+= 2.
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\
+\>", "Text",
+ CellChangeTimes->{{3.686967353998975*^9, 3.6869674590940294`*^9}}],
+
+Cell[TextData[{
+ "b. f(x) = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["8", 
+    RowBox[{"x", "-", "2"}]], TraditionalForm]]],
+ "\n",
+ "    Ditanya: Kekontinuan pada x=2?\n    Jawab:\n    Kerjakan menggunakan \
+cara yang sama dengan soal sebelumnya."
+}], "Text",
+ CellChangeTimes->{{3.6867337967282295`*^9, 3.686733797275117*^9}, {
+  3.6869678603570623`*^9, 3.6869678951542597`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FormBox[
+     FractionBox["8", 
+      RowBox[{"x", "-", "2"}]],
+     TraditionalForm], ",", " ", 
+    RowBox[{"x", "\[Rule]", " ", "2"}], ",", " ", 
+    RowBox[{"Direction", "\[Rule]", " ", "1"}]}], "]"}], "==", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FormBox[
+     FractionBox["8", 
+      RowBox[{"x", "-", "2"}]],
+     TraditionalForm], ",", " ", 
+    RowBox[{"x", "\[Rule]", " ", "2"}], ",", " ", 
+    RowBox[{"Direction", "\[Rule]", " ", 
+     RowBox[{"-", "1"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.686967925326521*^9, 3.6869679842648597`*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.6869679627801266`*^9}]
+}, Open  ]],
+
+Cell["\<\
+    Karena limit kiri tidak sama dengan limit kanan, fungsi ini tidak \
+memiliki limit pada x = 2 sehingga f(x) diskontinu pada x = 2.
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+------------------------------------------------------------------------------\
+--------------\
+\>", "Text",
+ CellChangeTimes->{{3.686967971061613*^9, 3.6869680407669077`*^9}}],
+
+Cell["\<\
+4. Carilah sebuah fungsi yang memiliki nilai limit di suatu titik, namun \
+nilai limit di titik tersebut tersebut tidak sama dengan nilai fungsinya. \
+Kemudian plot fungsinya.
+
+    Diketahui: Fungsi yang memiliki limit di suatu titik namun limit di titik \
+tersebut tidak sama dengan nilai fungsi
+    Ditanya: Fungsi tersebut dan grafiknya?
+    Jawab:
+    Soal ini memiliki kebebasan untuk dijawab. Cara mudah yang dapat \
+dilakukan adalah mencari suatu titik yang akan memetakan fungsi pada nilai \
+\[Infinity]\
+\>", "Text",
+ CellChangeTimes->{{3.6869680534232388`*^9, 3.686968075954774*^9}, {
+  3.6869681167835474`*^9, 3.686968180565624*^9}, {3.6869683787197175`*^9, 
+  3.6869683932715383`*^9}, {3.686969928888668*^9, 3.686969966959093*^9}, {
+  3.686970017287817*^9, 3.686970046100687*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"z", "[", "x_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["x", "2"], "-", "25"}], 
+   RowBox[{"x", "-", "5"}]]}]], "Input",
+ CellChangeTimes->{{3.6869683403133993`*^9, 3.6869683686882563`*^9}, {
+   3.6869684029434547`*^9, 3.686968413677966*^9}, 3.6869685925612235`*^9, {
+   3.686968643262104*^9, 3.686968644824707*^9}, {3.686968845164595*^9, 
+   3.6869690754785748`*^9}, {3.686969154220314*^9, 3.6869692575330296`*^9}, {
+   3.686969297472106*^9, 3.686969390982107*^9}, {3.6869698731290407`*^9, 
+   3.686969880344827*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"z", "[", "x", "]"}], ",", 
+    RowBox[{"x", "\[Rule]", "5"}], ",", 
+    RowBox[{"Direction", "\[Rule]", "1"}]}], "]"}], "\[Equal]", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"z", "[", "x", "]"}], ",", 
+    RowBox[{"x", "\[Rule]", "5"}], ",", 
+    RowBox[{"Direction", "\[Rule]", 
+     RowBox[{"-", "1"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6869684209280605`*^9, 3.68696846968157*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.6869684528844824`*^9, 3.6869685995925903`*^9, 3.6869686476215386`*^9, 
+   3.6869687131035833`*^9, {3.686968924208009*^9, 3.6869689323331175`*^9}, 
+   3.6869690818847837`*^9, {3.6869691808874006`*^9, 3.686969218903491*^9}, 
+   3.686969263642381*^9, {3.6869693794033213`*^9, 3.686969393310262*^9}, 
+   3.6869698830791254`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"z", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "15"}], ",", "15"}], "}"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"Green", ",", " ", 
+      RowBox[{"Thickness", "[", "0.015", "]"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6869684573689127`*^9, 3.686968571789591*^9}, {
+  3.686968603905118*^9, 3.686968624730748*^9}, {3.6869686617217274`*^9, 
+  3.686968696118495*^9}, {3.686968726213061*^9, 3.6869687739432545`*^9}, {
+  3.686969888626071*^9, 3.6869699219233766`*^9}, {3.6869699890530796`*^9, 
+  3.686970011537749*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0, 1, 0], Thickness[0.015], LineBox[CompressedData["
+1:eJwt1HtU02Ucx3E2mHJT2MZtDGHsAYLl4wUMGsrZVwlBbYhclpcwmKAcRKF5
+m2dKcuSi0jHut7EMBISmkKVCWuxJSApjeixRA4VCmIxMbkNQgWzn98fnvP79
+/PV2l6ZGJtJNTEzEb/e/x3Xi8fl5RGa0yqfz82wypHAw9LxBpOvlUn3zDJuE
+2/a9bJ5BpJLX+iJ1gk14wrTZ1AlE1sr6X/UNscnNMwXm/UOIZNp7MkkXm5gv
+e+BKuhCx/bgx6ISSTYoOxm06oUTEe5iUmASwiZp2oMYkABGJ6VAYbT+LMBJD
+fTmxfGLZeTbB97otYT/8OaU6352I4xy/O71+MYlsq9jl08kjGxbtPVvrbUUU
+L4JS8gbciOGJ4iGvYyFpOVKR3LTZlaS9WHV/5zkzEl4Qw5srdyEqDzW88aOR
+UNWP4WH/OBPuoalA98uvNXUdR7sP7OCQclfdtjv7DJqdmUX2d+odySi/5qJ8
+/XNNepxpoxXbgYyZctNiy/o1JthNE5xlR+bODQ4cqSeaP3PLc9T3WUS6bk92
+aO09kYtlUsPkOiZxa9Jc2f5sULT3PQGjx8WGCIrVhg23xkS7Ap7Ut7VZkcD8
+4Ea5fFokkAfO768xJ5dscmn85jlR1eOo9qNrGSSOf3F1disddBn2a0Kd6MQp
+Xd/WomPA9WLvkGeSWY3H1b2Pc6MtYMXwo8nlqilNklUhI+myNXxwvcdiVjKq
+6eOzFBl/2EBaQ9M0kz2guWepJyoVEyS7UdW9Y79qup5OJXNWsaHjt0dn/KJ+
+Ee3WSirLb9pBIP7p24jSAdEFz60OepkD0A/b9yZwRkUnYhkB2xY4wULriAzp
+v1Miumn0V2U3OHCyvztYdn5WxG8x5PUmceEbZXZE+jgNHoqDvUUzLpBanWD7
+VMIA4RZfc5naFXYmVyzJyTCHsordHfE8HpzecljoV2kF0qJYrbWOB2Z2xUOf
+vVoMtJDamXOt7vDgdtZopg0Tng+uk9/M4UOMQupf0cYCddBKblc8ghSrEb52
+ux1cyTrE3IM9wE19q2SB3h7yY3ZtMjV4gKIlOMpG6QhBvVUNOV2ekFaXcs1/
+OQeEUf47lKVeYE0PkC4bdAZGBndlqewdCNkXXSwodIFq/683Fm/wBqfvl6SG
+eLhCbu/ZZj7LBwpkp/JXPHCDjcL2sLIRH4jM3oxV13iUAhDsyIypOe4OPkbf
+he4hi+rCGD7lUtBKB9ey3BDcMYrhL7ML08V8RIlhsi6pieOFwGAUA2dkxMUd
+I0oMCQfGXy5fjSgxvDo5f0n8EYLXRjF41XKcT3+BKDEIQ3vuWhcieN8ohg+H
+K3PyShCIjWL4FPMMpSpEieGHq15369QIbhjFEHnLL7u9A1FiSEwyrAm7jSgx
+yC2bJ25rESUGVXhg/O/3EXxpFMOzbljz9wCCYaNv/8rpE4k6RIlhEbe9YViP
+KDH4fhLqODaGYKVRDCE0C+1BA6LEsPV8Z+b0NIJtRjEkh3y++tgbRImB6hcl
+hv8AwzU0Zg==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  Method->{},
+  PlotRange->{{-10, 10}, {-15, 15}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], Automatic}]], "Output",
+ CellChangeTimes->{{3.6869685272634597`*^9, 3.686968573775873*^9}, {
+  3.6869686044676275`*^9, 3.686968662252903*^9}, {3.686968696915815*^9, 
+  3.6869687744120364`*^9}, {3.6869698854385333`*^9, 3.68696992268901*^9}, {
+  3.6869700029594316`*^9, 3.6869700119908195`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Sehingga kita mendapatkan contoh fungsi dan grafiknya dari yang diminta oleh \
+soal.\
+\>", "Text",
+ CellChangeTimes->{{3.6869700532257786`*^9, 3.68697007881487*^9}}]
+},
+WindowSize->{1355, 671},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1965, 47, 302, "Text"],
+Cell[CellGroupData[{
+Cell[2547, 71, 418, 12, 33, "Input"],
+Cell[2968, 85, 765, 25, 46, "Output"]
+}, Open  ]],
+Cell[3748, 113, 823, 26, 39, "Text"],
+Cell[4574, 141, 1300, 24, 201, "Text"],
+Cell[5877, 167, 407, 13, 31, "Input"],
+Cell[6287, 182, 357, 10, 46, "Text"],
+Cell[6647, 194, 752, 18, 74, "Text"],
+Cell[7402, 214, 1047, 21, 154, "Text"],
+Cell[8452, 237, 2305, 38, 325, "Text"],
+Cell[CellGroupData[{
+Cell[10782, 279, 786, 20, 52, "Input"],
+Cell[11571, 301, 1168, 34, 91, "Output"]
+}, Open  ]],
+Cell[12754, 338, 969, 26, 61, "Text"],
+Cell[13726, 366, 1296, 26, 171, "Text"],
+Cell[15025, 394, 538, 11, 45, "Input"],
+Cell[CellGroupData[{
+Cell[15588, 409, 499, 12, 31, "Input"],
+Cell[16090, 423, 3704, 113, 506, "Output"]
+}, Open  ]],
+Cell[19809, 539, 444, 8, 68, "Text"],
+Cell[CellGroupData[{
+Cell[20278, 551, 227, 4, 31, "Input"],
+Cell[20508, 557, 138, 2, 31, "Output"]
+}, Open  ]],
+Cell[20661, 562, 210, 6, 68, "Text"],
+Cell[20874, 570, 371, 8, 46, "Input"],
+Cell[CellGroupData[{
+Cell[21270, 582, 593, 14, 31, "Input"],
+Cell[21866, 598, 1356, 36, 297, "Output"]
+}, Open  ]],
+Cell[23237, 637, 2002, 39, 218, "Text"],
+Cell[25242, 678, 516, 13, 46, "Input"],
+Cell[CellGroupData[{
+Cell[25783, 695, 489, 14, 31, "Input"],
+Cell[26275, 711, 1302, 36, 162, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27614, 752, 466, 12, 31, "Input"],
+Cell[28083, 766, 1066, 26, 162, "Output"]
+}, Open  ]],
+Cell[29164, 795, 1294, 25, 97, "Text"],
+Cell[30461, 822, 669, 18, 72, "Input"],
+Cell[31133, 842, 1135, 25, 277, "Text"],
+Cell[32271, 869, 730, 22, 31, "Input"],
+Cell[33004, 893, 631, 11, 87, "Text"],
+Cell[CellGroupData[{
+Cell[33660, 908, 1211, 34, 52, "Input"],
+Cell[34874, 944, 348, 10, 46, "Output"]
+}, Open  ]],
+Cell[35237, 957, 671, 16, 93, "Text"],
+Cell[CellGroupData[{
+Cell[35933, 977, 154, 4, 46, "Input"],
+Cell[36090, 983, 157, 4, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36284, 992, 140, 3, 46, "Input"],
+Cell[36427, 997, 139, 3, 46, "Output"]
+}, Open  ]],
+Cell[36581, 1003, 936, 17, 125, "Text"],
+Cell[CellGroupData[{
+Cell[37542, 1024, 605, 16, 31, "Input"],
+Cell[38150, 1042, 124, 2, 31, "Output"]
+}, Open  ]],
+Cell[38289, 1047, 235, 6, 49, "Text"],
+Cell[CellGroupData[{
+Cell[38549, 1057, 555, 14, 31, "Input"],
+Cell[39107, 1073, 125, 2, 31, "Output"]
+}, Open  ]],
+Cell[39247, 1078, 433, 8, 49, "Text"],
+Cell[39683, 1088, 1044, 21, 182, "Text"],
+Cell[CellGroupData[{
+Cell[40752, 1113, 627, 16, 31, "Input"],
+Cell[41382, 1131, 1863, 39, 259, "Output"]
+}, Open  ]],
+Cell[43260, 1173, 1249, 23, 165, "Text"],
+Cell[CellGroupData[{
+Cell[44534, 1200, 759, 21, 33, "Input"],
+Cell[45296, 1223, 147, 2, 31, "Output"]
+}, Open  ]],
+Cell[45458, 1228, 431, 8, 49, "Text"],
+Cell[45892, 1238, 384, 11, 96, "Text"],
+Cell[CellGroupData[{
+Cell[46301, 1253, 625, 19, 46, "Input"],
+Cell[46929, 1274, 76, 1, 31, "Output"]
+}, Open  ]],
+Cell[47020, 1278, 736, 12, 68, "Text"],
+Cell[47759, 1292, 802, 16, 125, "Text"],
+Cell[48564, 1310, 573, 12, 49, "Input"],
+Cell[CellGroupData[{
+Cell[49162, 1326, 476, 13, 31, "Input"],
+Cell[49641, 1341, 380, 6, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50058, 1352, 789, 19, 31, "Input"],
+Cell[50850, 1373, 2190, 42, 249, "Output"]
+}, Open  ]],
+Cell[53055, 1418, 175, 4, 30, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
