@@ -4,7 +4,12 @@
 Word List is a program to list words and their occurences in a text.
 
 ## Background
-Final Project for Algorithm and Programming (SCMA601400) course taken on Year 1 Term 2. I was the lead programmer for this project.
+- Purpose: Final project for Algorithm and Programming (SCMA601400) course taken on Year 1 Term 2
+- Involvement: Team
+    - Role: Team Lead, Lead Programmer
+    - Team Size: 6
+- Achievement: A for laboratory assessment
+- Tech Stack: Python
 
 ## How to use `Daftar Kata.exe`
 1. App will set the directory to the folder which contains this application
