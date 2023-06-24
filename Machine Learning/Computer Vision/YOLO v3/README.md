@@ -10,4 +10,4 @@
 
 ## Notes
 - Planned for Improvement: Maybe
-- (*) Relates to TBA
+- (*) Relates to [Undergraduate Thesis Concept](../../../Basic%20Python/Undergraduate%20Thesis%20Concept)
