@@ -4,6 +4,10 @@
 ![Prediction](predictions.png)
 
 ## Background
-- Purpose: Homework project for Research Methods (SCMA603901) course taken on Year 3 Term 1
+- Purpose: Homework project for Research Methods (SCMA603901) course taken on Year 3 Term 1*
 - Involvement: Individual
 - Tech Stack: Python, OpenCV
+
+## Notes
+- Planned for Improvement: Maybe
+- (*) Relates to TBA
