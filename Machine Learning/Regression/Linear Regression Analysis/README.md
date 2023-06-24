@@ -1,4 +1,4 @@
-# XyPy
+# Linear Regression Analysis
 <img src="https://img.shields.io/badge/Language-Indonesian-D5AE22"> <img src="https://img.shields.io/badge/Last Update-14/06/2019-0A7BBC"> <img src="https://img.shields.io/badge/Status-Working-2CB037"> <img src="https://img.shields.io/badge/Last Test-23/06/2023-2CB037">
 
 ## Background
