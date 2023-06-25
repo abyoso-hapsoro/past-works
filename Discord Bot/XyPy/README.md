@@ -16,4 +16,4 @@
 - Planned for Improvement: No
     - This project will likely be completely overhauled
     - Planned improvements will be on new bot
-- Previously last updated on 8 April 2021
+- Previous active development (v0.3) was last updated on 8 April 2021
