@@ -2,20 +2,21 @@ from discord.ext import commands
 
 ###############################################################################
 
+
 class Information(commands.Cog):
+
   def __init__(self, bot):
     self.bot = bot
 
   @commands.command(
-    help  = 'Information on the bot you are using',
+    help = 'Information on the bot you are using',
     brief = 'background info and plans'
   )
   async def info(self, ctx):
-    await ctx.channel.send('''
-      Still a very bareback developing bot intended for basic Mathematics, Python commands, LaTeX, wiki inquiries, health support, and potentially Machine Learning on the fly without needing to access your computer''' + 
-      
-      '```Created by\t: Xyba\nLast Updated  : 8 April 2021```'
-      )
+    await ctx.channel.send(
+      '''
+      Proof of concept bot for personal server. In the future, this bot may be improved or replaced entirely. Currently on version 0.35'''
+      + '```Created by\t: Xyba\nLast Updated  : 25 June 2023```')
 
-def setup(bot):
-  bot.add_cog(Information(bot))
+async def setup(bot):
+  await bot.add_cog(Information(bot))

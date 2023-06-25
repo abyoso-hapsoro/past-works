@@ -13,6 +13,8 @@ from sympy.parsing.sympy_parser import standard_transformations, implicit_multip
 transformations = (standard_transformations +
                   (implicit_multiplication_application,))
 
+from forex_python.converter import CurrencyRates as rate
+
 ###############################################################################
 
 class MathStuff(commands.Cog):
@@ -64,5 +66,19 @@ class MathStuff(commands.Cog):
     
     await ctx.channel.send(file = image)
 
-def setup(bot):
-  bot.add_cog(MathStuff(bot))
+  @commands.command(
+    help  = 'Real Time Currency Converter based on ratesapi.io published by European Central Bank updated daily on 15.00 CET\nSyntax: _convert Currency[Value, Origin Currency, Target Currency]',
+    brief = 'real time currency conversion'
+  )
+  async def convert(self, ctx, *args):
+    context = ''
+    for arg in args:
+      context += ' ' + arg
+    val, reg1, reg2 = context[10:-1].split(',')
+    val, reg1, reg2 = float(val), reg1.strip(' '), reg2.strip(' ')
+    multiplier      = rate().get_rate(reg1, reg2)
+    result          = round(val * multiplier, 2)
+    await ctx.channel.send(str(result) + ' ' + reg2)
+
+async def setup(bot):
+  await bot.add_cog(MathStuff(bot))
