@@ -13,4 +13,5 @@ This was my ideation for undergraduate thesis research proposal homework. I didn
 
 ## Notes
 - Planned for Improvement: Maybe
+- Python Version: 3.6
 - (*) Relates to [YOLO v3 Inference](../../Machine%20Learning/Computer%20Vision/YOLO%20v3)

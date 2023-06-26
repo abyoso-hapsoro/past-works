@@ -16,4 +16,5 @@
 - Planned for Improvement: No
     - This project will likely be completely overhauled
     - Planned improvements will be on new bot
+- Python Version: 3.8
 - Previous active development (v0.3) was last updated on 8 April 2021

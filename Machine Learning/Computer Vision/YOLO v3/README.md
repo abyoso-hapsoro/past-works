@@ -10,4 +10,5 @@
 
 ## Notes
 - Planned for Improvement: Maybe
+- Python Version: 3.6
 - (*) Relates to [Undergraduate Thesis Concept](../../../Basic%20Python/Undergraduate%20Thesis%20Concept)

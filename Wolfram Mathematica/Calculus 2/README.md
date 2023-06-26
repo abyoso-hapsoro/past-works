@@ -11,3 +11,4 @@
 
 ## Notes
 - Planned for Improvement: No
+- Mathematica Version: 9.0 for 2017, 11.1 for 2018
