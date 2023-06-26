@@ -8,8 +8,8 @@
 
 ## Example Usage
 ![Currency Converter](images/Convert.png)
-![Wikipedia](images/Wiki.png)
 ![Plot](images/Plot.png)
+![Wikipedia](images/Wiki.png)
 ![Number Guessing Game](images/Number%20Guessing%20Game.png)
 
 ## Background
