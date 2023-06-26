@@ -1,5 +1,5 @@
 # XyPy
-<img src="https://img.shields.io/badge/Language-English-D5AE22"> <img src="https://img.shields.io/badge/Last Update-25/06/2023-0A7BBC"> <img src="https://img.shields.io/badge/Bot Status-Working-2CB037"> <img src="https://img.shields.io/badge/Last Bot Test-25/06/2023-2CB037">
+<img src="https://img.shields.io/badge/Language-English-D5AE22"> <img src="https://img.shields.io/badge/Last Update-27/06/2023-0A7BBC"> <img src="https://img.shields.io/badge/Bot Status-Working-2CB037"> <img src="https://img.shields.io/badge/Last Bot Test-27/06/2023-2CB037">
 
 ![Information](images/Information.png)
 

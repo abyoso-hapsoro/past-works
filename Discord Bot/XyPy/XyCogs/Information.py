@@ -15,8 +15,8 @@ class Information(commands.Cog):
   async def info(self, ctx):
     await ctx.channel.send(
       '''
-      Proof of concept bot for personal server. In the future, this bot may be improved or replaced entirely. Currently on version 0.35'''
-      + '```Created by\t: Xyba\nLast Updated  : 25 June 2023```')
+      Proof of concept bot for personal server. In the future, this bot may be improved or replaced entirely. Currently on version 0.38'''
+      + '```Created by\t: Xyba\nLast Updated  : 27 June 2023```')
 
 async def setup(bot):
   await bot.add_cog(Information(bot))
