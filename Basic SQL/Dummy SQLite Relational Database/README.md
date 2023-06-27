@@ -3,6 +3,12 @@
 
 Prepared a dummy Database for a university case detailed in `Final Project Problem Statement.pdf`.
 
+## Entity Relationship Diagram
+![ER Diagram](https://github.com/abyoso-hapsoro/past-works/assets/51505905/c688d2bf-a654-493c-8897-172b000ef145)
+
+## Relational Tables
+![Relational Tables](https://github.com/abyoso-hapsoro/past-works/assets/51505905/de214470-24a0-4f02-a5a3-9d9467ec0974)
+
 ## Background
 - Purpose: Final project for Structural Computation (SCMA603403) course taken on Year 3 Term 1
 - Involvement: Team
