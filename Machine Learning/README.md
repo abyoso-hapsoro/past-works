@@ -1,2 +1,2 @@
-# Machine Learning Projects
+# Machine Learning
 This section is dedicated to Machine Learning projects

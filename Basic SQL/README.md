@@ -1,2 +1,2 @@
-# Basic SQL Projects
+# Basic SQL
 This section is dedicated to basic SQL projects

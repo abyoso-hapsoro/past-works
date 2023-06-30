@@ -1,2 +1,2 @@
-# Basic Python Projects
+# Basic Python
 This section is dedicated to basic Python projects
