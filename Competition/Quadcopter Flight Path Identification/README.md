@@ -13,7 +13,7 @@ The original predictions are given by the blue points then smoothed into the yel
 ## General Information
 - Data available in Kaggle [here](https://www.kaggle.com/competitions/ittodaydsc2019/data)
 - Learning Task: Double Objective Regression
-- Evaluation Metric: [Mean Haversine Distance](https://github.com/mapado/haversine)
+- Evaluation Metric: Mean [Haversine Distance](https://github.com/mapado/haversine)
 
 ## Our Submissions
 Our team submitted a total of 20 submissions. Submission details that I have documented are listed below.
@@ -37,6 +37,7 @@ Our team submitted a total of 20 submissions. Submission details that I have doc
 
 ## Competition Details
 - Information about the competition can be found [here](https://www.instagram.com/p/By7s5G-g_RR/)
+- The competition is national scale for Undergraduates
 - To qualify for finals, teams are evaluated 45% based on prediction accuracy and 55% based on report
 - 7 teams from Top 14 of Qualifiers was taken for Finals
 - Our team finished at 10th of 56 participating teams in Qualifiers
