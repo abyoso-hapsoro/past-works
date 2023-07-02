@@ -50,7 +50,7 @@ As an alternative to proving, we explore an edge irregular labeling of $Q_4=P_3\
 <p align="center">
     <img src="https://github.com/abyoso-hapsoro/past-works/assets/51505905/a119e62e-a0b4-4136-9449-9a83711d2af5" width="600" alt="Q4 Labeling">
 </p>
-The edge weight 34 is missing implying the existence of a better configuration. This hints our conjecture being correct for this specific case.
+The edge weights 34, 51, and 53 are missing implying the existence of a better configuration. This hints our conjecture possibly being correct for this specific case.
 
 ## Background
 - Purpose: Final project for Graph Theory (SCMA603162) course taken on Year 3 Term 1
