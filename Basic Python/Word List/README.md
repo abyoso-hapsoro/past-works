@@ -3,7 +3,7 @@
 
 Word List is a program to list words and their occurences in a text.
 
-## How to use `Daftar Kata.exe`
+## How to use [Daftar Kata.exe](Daftar%20Kata.exe)
 1. App will set the directory to the folder which contains this application
 2. Prepare a .txt file such as Teks.txt in the folder<br>
 ![usage1](https://github.com/abyoso-hapsoro/past-works/assets/51505905/46266028-d147-4c0c-a2ad-542df39d4faa)
