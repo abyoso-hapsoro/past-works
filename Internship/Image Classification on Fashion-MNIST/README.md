@@ -1,7 +1,7 @@
 # Image Classification on Fashion-MNIST
 <img src="https://img.shields.io/badge/Language-English-D5AE22"> <img src="https://img.shields.io/badge/Last Update-29/07/2019-0A7BBC"> <img src="https://img.shields.io/badge/Status-Not Working-D7624B"> <img src="https://img.shields.io/badge/Last Test-03/07/2023-2CB037">
 
-Tasked to apply what was [learned about PyTorch](../Hands-On%20PyTorch/) for internship work: "Train, Test, Validate on MLP, VGG16, ResNet-18, Resnet-50, Resnet-152" for Fashion-MNIST.
+Tasked to apply what was [learned about PyTorch](../Hands-On%20PyTorch/) for internship work: "Train, Test, Validate on MLP, VGG16, ResNet-18, ResNet-50, ResNet-152" for Fashion-MNIST.
 
 Explored further than the task required. The best performers are marked in **bold**.
 
