@@ -4,7 +4,7 @@
 ![Guessing Game](Guessing%20Game%20v0.5.2.png)
 
 ## Background
-- Purpose: Personal project to learn Tkinter in 1 week
+- Purpose: Personal project to learn Tkinter
 - Involvement: Individual
 - Tech Stack: Python
 
